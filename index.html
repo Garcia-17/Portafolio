@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/x-icon" href="./Resources/Images/Icon.svg" />
+
+    <title>Portafolio</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Pacifico&family=Playwrite+IE+Guides&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0&icon_names=menu"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Bangers&family=Pacifico&family=Playwrite+IE+Guides&display=swap"
+      rel="stylesheet"
+    />
+    <script>
+      function sideOpen() {
+        document.getElementById("sideBar").style.display = "block";
+      }
+
+      function sideClose() {
+        document.getElementById("sideBar").style.display = "none";
+        console.log("sideClose");
+      }
+    </script>
+
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        scrollbar-width: none;
+      }
+      body {
+        height: 100dvh;
+        width: 100dvw;
+        background: #131313;
+        animation: fadeIn 2s;
+      }
+      .upper-container {
+        width: 100vw;
+        height: 8dvh;
+        margin: auto;
+        align-items: center;
+        justify-content: space-between;
+        border-bottom: 1px solid #ffffff0c;
+        display: flex;
+        flex-direction: row;
+        padding: 10px 20px;
+      }
+      .text {
+        color: #ffffff;
+        font-weight: lighter;
+      }
+      #title {
+        font-size: 3dvh;
+        font-family: "Bangers", sans-serif;
+        animation-name: randomColor;
+        user-select: none;
+      }
+      #bodyText {
+        font-size: 2dvh;
+        font-family: "Bangers", sans-serif;
+        width: 100%;
+        overflow: auto;
+        display: grid;
+        align-items: center;
+      }
+      #bodyTextContainer {
+        height: 35dvh;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        max-width: 400px;
+      }
+      .material-symbols-outlined {
+        font-family: "Material Symbols Outlined", sans-serif;
+        font-size: 3dvh;
+        color: #ffffff;
+      }
+      .body-container {
+        width: 100%;
+        align-items: center;
+        justify-content: center;
+        display: flex;
+        height: 92dvh;
+      }
+      img#lowerLogo {
+        object-fit: contain;
+        animation: dogColorChange 10s;
+        animation-iteration-count: infinite;
+        -webkit-touch-callout: none;
+        -webkit-user-select: none;
+        -khtml-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        user-select: none;
+        pointer-events: none;
+        -webkit-user-drag: none;
+      }
+      #upperLogo {
+        width: 2.5dvw;
+        min-width: 45px;
+        height: auto;
+      }
+      #lowerLogo {
+        width: auto;
+        height: 100%;
+        max-width: 100%;
+      }
+      .logoText {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        gap: 10px;
+        width: max-content;
+      }
+      #centerText {
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        justify-items: center;
+        gap: 10vw;
+        flex-wrap: wrap;
+        padding: 10px;
+      }
+      #nameText {
+        font-size: 6dvh;
+        font-family: "bangers", sans-serif;
+      }
+      button {
+        background: none;
+        border: none;
+        cursor: pointer;
+      }
+      .lower-container {
+        width: 100vw;
+        height: 100vh;
+        margin: auto;
+        align-items: center;
+        justify-content: center;
+        display: flex;
+        flex-direction: row;
+      }
+      #projectsContainer {
+        width: 60vw;
+        height: 50vh;
+        background: #ffffff;
+        border-radius: 10px;
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        flex-direction: column;
+      }
+      .scroller {
+        overflow-y: scroll;
+        scroll-snap-type: y proximity;
+      }
+
+      .scroller section {
+        scroll-snap-align: center;
+        scroll-snap-stop: always;
+      }
+      #sideBar {
+        width: auto;
+        max-width: 30%;
+        height: 200vh;
+        background-color: #131313;
+        display: none;
+        position: fixed;
+        z-index: 1;
+        right: 0;
+        border-left: #ffffff11 1px solid;
+        text-wrap-mode: nowrap;
+      }
+      .barItem {
+        width: 100%;
+        text-align: center;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-decoration: none;
+        font-size: clamp(0.8rem, 3.5dvw, 2rem);
+        font-family: "bangers", sans-serif;
+        border-bottom: #474747 1px solid;
+        height: 8vh;
+        padding: 20px;
+      }
+      #terminal {
+        width: auto;
+        height: 50vh;
+        object-fit: contain;
+        border-radius: 10px;
+      }
+      @keyframes randomColor {
+        0% {
+          text-shadow: #ff0000 0px 0px 10px;
+        }
+        25% {
+          text-shadow: #fbff00 0px 0px 10px;
+        }
+        50% {
+          text-shadow: #09ff00 0px 0px 10px;
+        }
+        75% {
+          text-shadow: #0059ff 0px 0px 10px;
+        }
+        100% {
+          text-shadow: #ff0000 0px 0px 10px;
+        }
+      }
+      @keyframes fadeIn {
+        0% {
+          opacity: 0;
+        }
+        100% {
+          opacity: 1;
+        }
+      }
+      @keyframes dogColorChange {
+        0% {
+          filter: invert(48%) sepia(79%) saturate(2476%) hue-rotate(86deg)
+            brightness(118%) contrast(119%);
+        }
+        25% {
+          filter: invert(93%) sepia(61%) saturate(5974%) hue-rotate(355deg)
+            brightness(109%) contrast(103%);
+        }
+        50% {
+          filter: invert(48%) sepia(79%) saturate(2476%) hue-rotate(86deg)
+            brightness(118%) contrast(119%);
+        }
+        75% {
+          filter: invert(20%) sepia(64%) saturate(7469%) hue-rotate(220deg)
+            brightness(107%) contrast(101%);
+        }
+        100% {
+          filter: invert(48%) sepia(79%) saturate(2476%) hue-rotate(86deg)
+            brightness(118%) contrast(119%);
+        }
+      }
+      @keyframes sideBarAnimation {
+        0% {
+          opacity: 0;
+        }
+        100% {
+          opacity: 1;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <article class="scroller">
+      <div id="sideBar">
+        <button onclick="sideClose()" class="barItem text">
+          Cerrar &times;
+        </button>
+        <a href="#projectsContainer" class="barItem text">Proyectos</a>
+        <a href="#" class="barItem text">Certificados</a>
+        <a href="#" class="barItem text">Curriculum</a>
+      </div>
+      <section class="top-container">
+        <div class="upper-container">
+          <div class="logoText">
+            <img
+              id="upperLogo"
+              src="./Resources/Images/Icon.svg"
+              alt="Vector pitbull"
+              draggable="false"
+            />
+            <h1 class="text" id="title">Portafolio</h1>
+          </div>
+          <button onclick="sideOpen()" id="menuButton" class="buttonMenu">
+            <span class="material-symbols-outlined"> menu </span>
+          </button>
+        </div>
+
+        <div class="body-container">
+          <div id="centerText">
+            <img
+              draggable="false"
+              id="lowerLogo"
+              src="./Resources/Vector 1.svg"
+              alt="Vector pitbull"
+            />
+            <div id="bodyTextContainer">
+              <h1 class="text" id="nameText">Jesus Fernando Garcia Briseño</h1>
+              <h2 class="text" id="bodyText">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Nam
+                alias sint odit corrupti dolores harum possimus modi enim
+                nostrum incidunt! Quo, dolores rerum delectus vitae consequuntur
+                assumenda laudantium sunt accusantium? Lorem ipsum, dolor sit
+                amet consectetur adipisicing elit. Magni doloribus maiores quasi
+                eius dignissimos eveniet eos nostrum facilis, mollitia delectus,
+                tempora natus repudiandae amet repellat enim facere. Deserunt,
+                unde facere!
+              </h2>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="lower-container">
+        <div id="projectsContainer">
+          <img id="terminal" src="./Resources/Imagen1.png" alt="" />
+          <div>
+            <h2>dasdasdasdasadasdasdasdasdasdadasdasdas</h2>
+            <code>dasdasdasdasadasdasdasdasdasdadasdasdas</code>
+          </div>
+        </div>
+      </section>
+    </article>
+  </body>
+</html>
