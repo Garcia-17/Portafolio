@@ -44,12 +44,13 @@ body {
 }
 #bodyText {
   font-size: 18px;
-  font-family: "Bangers", sans-serif;
+  font-family: "Open Sans";
   width: 100%;
   display: grid;
   align-items: center;
   border-left: rgb(255, 255, 255) 1px solid;
   padding-left: 5px;
+  font-weight: 600;
 }
 #bodyTextContainer {
   height: fit-content;
@@ -139,10 +140,12 @@ button {
   height: 100vh;
   margin: auto;
   align-items: center;
-  justify-content: space-between;
+  justify-content: center;
   display: flex;
-  padding: 0px 40px;
+  padding: 50px 30px;
   flex-direction: row;
+  column-gap: 15%;
+  flex-wrap: wrap;
 }
 .scroller {
   overflow-y: scroll;
@@ -168,19 +171,39 @@ button {
   border-left: #ffffff11 1px solid;
   text-wrap-mode: nowrap;
 }
+#projectDescription {
+  font: 15px "open sans", sans-serif;
+  margin-bottom: 10px;
+}
 #projectsInfoContainer {
-  width: 100%;
+  width: 650px;
   display: flex;
   flex-direction: column;
-  gap: 10px;
-  flex-wrap: wrap;
+  gap: 50px;
   align-content: center;
   justify-content: center;
   align-items: flex-start;
   border: #ffffff11 1px solid;
   border-radius: 4px;
   padding: 10px;
-  height: 80%;
+  height: fit-content;
+  flex-wrap: nowrap;
+}
+#repButton {
+  width: fit-content;
+  height: 25px;
+  background-color: #ffffff;
+  border-radius: 5px;
+  color: #000000;
+  padding: 5px;
+  font-size: 10px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  transition: 0.3s;
+  margin-bottom: 10px;
 }
 .barItem {
   width: -webkit-fill-available;
@@ -201,8 +224,8 @@ button {
   background-color: #13131305;
 }
 #terminal {
-  width: auto;
-  height: 80%;
+  width: 450px;
+  height: 100%;
   object-fit: contain;
   animation: dropShadowAnimation 5s;
   animation-iteration-count: infinite;
