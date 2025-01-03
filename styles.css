@@ -5,8 +5,8 @@
   scrollbar-width: none;
 }
 model-viewer {
-  width: 320px;
-  height: 320px;
+  width: 450px;
+  height: 450px;
   scrollbar-width: none;
 }
 body {
@@ -28,9 +28,10 @@ body {
 .text {
   color: #ffffff;
   font-weight: lighter;
+  letter-spacing: 1.1px;
 }
 #title {
-  font-size: 20px;
+  font-size: 25px;
   font-family: "Bangers", sans-serif;
   animation-name: randomColor;
   user-select: none;
@@ -38,21 +39,25 @@ body {
   display: flex;
   width: fit-content;
   flex-direction: row;
+  letter-spacing: 2px;
+  text-shadow: #ffffff5b 0px 0px 5px;
 }
 #bodyText {
-  font-size: 2dvh;
+  font-size: 18px;
   font-family: "Bangers", sans-serif;
   width: 100%;
-  overflow: auto;
   display: grid;
   align-items: center;
+  border-left: rgb(255, 255, 255) 1px solid;
+  padding-left: 5px;
 }
 #bodyTextContainer {
-  height: 40%;
-  width: 500px;
+  height: fit-content;
+  width: 650px;
   display: flex;
   flex-direction: column;
   justify-content: space-around;
+  gap: 10px;
 }
 .material-symbols-outlined {
   font-family: "Material Symbols Outlined", sans-serif;
@@ -64,7 +69,8 @@ body {
   align-items: center;
   justify-content: center;
   display: flex;
-  height: calc(100vh - 60px);
+  min-height: calc(100vh - 60px);
+  height: max-content;
 }
 img#lowerLogo {
   object-fit: contain;
@@ -81,6 +87,8 @@ img#lowerLogo {
 }
 #upperLogo {
   height: 100%;
+  animation: dogColorChange 100s;
+  animation-iteration-count: infinite;
 }
 #lowerLogo {
   width: auto;
@@ -101,47 +109,48 @@ img#lowerLogo {
   display: flex;
   flex-direction: row;
   align-items: center;
-  justify-content: space-around;
+  justify-content: center;
   justify-items: center;
   flex-wrap: wrap;
-  padding: 20px;
+  padding: 50px 30px;
   height: 100%;
   align-content: space-around;
+  row-gap: 0;
+  column-gap: 15%;
 }
 #nameText {
-  font-size: 6dvh;
+  font-size: 45px;
   font-family: "bangers", sans-serif;
+  color: #ffffff;
+  letter-spacing: 2px;
+  text-shadow: #ffffff5b 0px 0px 2px;
 }
 button {
   background: none;
   border: none;
   cursor: pointer;
 }
+#projectsTitle {
+  font-size: 50px;
+  font-family: "bangers", sans-serif;
+}
 .lower-container {
   width: 100vw;
   height: 100vh;
   margin: auto;
   align-items: center;
-  justify-content: center;
+  justify-content: space-between;
   display: flex;
+  padding: 0px 40px;
   flex-direction: row;
-}
-#projectsContainer {
-  width: 60vw;
-  height: 50vh;
-  background: #ffffff;
-  border-radius: 10px;
-  display: flex;
-  align-items: center;
-  justify-content: space-around;
-  flex-direction: column;
 }
 .scroller {
   overflow-y: scroll;
   scroll-snap-type: y proximity;
 }
 .top-container {
-  height: 100vh;
+  height: 100%;
+  border-bottom: #ffffff15 1px solid;
 }
 
 .scroller section {
@@ -149,8 +158,7 @@ button {
   scroll-snap-stop: always;
 }
 #sideBar {
-  width: auto;
-  max-width: 30%;
+  width: 180px;
   height: 200vh;
   background-color: #131313;
   display: none;
@@ -160,27 +168,47 @@ button {
   border-left: #ffffff11 1px solid;
   text-wrap-mode: nowrap;
 }
-.barItem {
+#projectsInfoContainer {
   width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  flex-wrap: wrap;
+  align-content: center;
+  justify-content: center;
+  align-items: flex-start;
+  border: #ffffff11 1px solid;
+  border-radius: 4px;
+  padding: 10px;
+  height: 80%;
+}
+.barItem {
+  width: -webkit-fill-available;
   text-align: center;
   display: flex;
   align-items: center;
   justify-content: center;
   text-decoration: none;
-  font-size: clamp(0.8rem, 3.5dvw, 2rem);
+  font-size: clamp(0.8rem, 3.5dvw, 1.5rem);
   font-family: "bangers", sans-serif;
   border-bottom: #474747 1px solid;
-  height: 8vh;
+  height: 5vh;
   padding: 20px;
-  border-radius: 10px;
-  margin: 25px;
+  border-radius: 8px;
+  margin: 10px;
   border: #ffffff11 1px solid;
+  box-shadow: #ffffff11 0px 0px 5px;
+  background-color: #13131305;
 }
 #terminal {
   width: auto;
-  height: 50vh;
+  height: 80%;
   object-fit: contain;
-  border-radius: 10px;
+  animation: dropShadowAnimation 5s;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease-in-out;
+  -webkit-filter: drop-shadow(0px 0px 1px #ffffff02);
+  filter: drop-shadow(0px 0px 0px #ffffff77);
 }
 @keyframes randomColor {
   0% {
@@ -235,5 +263,16 @@ button {
   }
   100% {
     opacity: 1;
+  }
+}
+@keyframes dropShadowAnimation {
+  0% {
+    filter: drop-shadow(0px 0px 1px #ffffff3f);
+  }
+  50% {
+    filter: drop-shadow(0px 0px 4px #ffffff3f);
+  }
+  100% {
+    filter: drop-shadow(0px 0px 1px #ffffff3f);
   }
 }
