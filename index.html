@@ -22,16 +22,7 @@
       href="https://fonts.googleapis.com/css2?family=Bangers&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Pacifico&family=Playwrite+IE+Guides&display=swap"
       rel="stylesheet"
     />
-    <script>
-      function sideOpen() {
-        document.getElementById("sideBar").style.display = "block";
-      }
-
-      function sideClose() {
-        document.getElementById("sideBar").style.display = "none";
-        console.log("sideClose");
-      }
-    </script>
+    <script src="Resources\Scripts\main.js"></script>
     <script
       type="module"
       src="https://ajax.googleapis.com/ajax/libs/model-viewer/4.0.0/model-viewer.min.js"
@@ -122,43 +113,55 @@
       </section>
 
       <section class="lower-container" id="lower-container">
-        <img id="terminal" src="./Resources/Images/Terminal.png" alt="" />
-        <div id="projectsInfoContainer">
-          <h1 class="text" id="projectsTitle">
-            Sistema de almacenamiento de evidencia
-          </h1>
-          <div>
-            <p class="text" id="projectDescription">
-              Frameworks: React native,Electron, FastAPI. Lenguajes: Python,
-              Javascript, Typescript.
-            </p>
-            <p class="text" id="projectDescription">Respositorios:</p>
-            <a
-              href="https://gitfront.io/r/Garcia/i6xjJ7oG9nqB/proyecto-embarques/"
-              class="text"
-              id="repButton"
-              target="_blank"
-              >Mobil app</a
-            >
-            <a
-              href="https://gitfront.io/r/Garcia/i6xjJ7oG9nqB/proyecto-embarques/"
-              class="text"
-              id="repButton"
-              target="_blank"
-              >Desktop app</a
-            >
-            <p class="text" id="projectDescription">
-              Descripcion: Se desarollo una aplicacion para el registro de
-              immagenes dentro de una terminal tc26 para posteriorente
-              registrarlkas den tro de un servidor local, en el cual mediante
-              una interfaz grafica que tammbien fue deesarrollado para este
-              proposito se observa la recepcion de los archivos, se tuvo que
-              adaptar el servidor a un equipo loical devbidop a las limitaciones
-              dentro de el area de trabajo y los recursos disponibles.
-            </p>
+        <a onclick="changeProjectVisualizerLeft()" id="projectSelectorButton"
+          ><</a
+        >
+        <div id="projectsContainer">
+          <img id="terminal" src="./Resources/Images/Terminal.png" alt="" />
+          <div id="projectsInfoContainer">
+            <h1 class="text" id="projectsTitle">
+              Sistema de almacenamiento de evidencia
+            </h1>
+            <div>
+              <p class="text" id="projectDescription">
+                Frameworks: React native,Electron, FastAPI.
+              </p>
+              <p class="text" id="projectDescription">
+                Lenguajes: Python, Javascript, Typescript.
+              </p>
+              <p class="text" id="projectDescription">Respositorios:</p>
+              <a
+                href="https://gitfront.io/r/Garcia/i6xjJ7oG9nqB/proyecto-embarques/"
+                class="text"
+                id="repButton"
+                target="_blank"
+                >Mobil app</a
+              >
+              <a
+                href="https://gitfront.io/r/Garcia/i6xjJ7oG9nqB/proyecto-embarques/"
+                class="text"
+                id="repButton"
+                target="_blank"
+                >Desktop app</a
+              >
+              <p class="text" id="projectDescription">
+                Descripcion: Se desarollo una aplicacion para el registro de
+                immagenes dentro de una terminal tc26 para posteriorente
+                registrarlkas den tro de un servidor local, en el cual mediante
+                una interfaz grafica que tammbien fue deesarrollado para este
+                proposito se observa la recepcion de los archivos, se tuvo que
+                adaptar el servidor a un equipo loical devbidop a las
+                limitaciones dentro de el area de trabajo y los recursos
+                disponibles.
+              </p>
+            </div>
           </div>
         </div>
+        <a onclick="changeProjectVisualizerRight()" id="projectSelectorButton"
+          >></a
+        >
       </section>
+      <section class="lower-container" id="lower-container"></section>
       <a
         href="https://www.linkedin.com/in/jesus-fernando-garcia-brise%C3%B1o-3719052a3/"
         target="_blank"

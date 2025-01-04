@@ -118,7 +118,7 @@ img#lowerLogo {
   column-gap: 15%;
 }
 #nameText {
-  font-size: 45px;
+  font-size: 5vh;
   font-family: "bangers", sans-serif;
   color: #ffffff;
   letter-spacing: 2px;
@@ -130,20 +130,19 @@ button {
   cursor: pointer;
 }
 #projectsTitle {
-  font-size: 50px;
+  font-size: 2.6vh;
   font-family: "bangers", sans-serif;
 }
 .lower-container {
   width: 100vw;
   min-height: 100vh;
-  margin: auto;
   align-items: center;
   justify-content: center;
   display: flex;
-  padding: 50px 30px;
+  padding: 50px 2%;
   flex-direction: row;
-  column-gap: 15%;
-  flex-wrap: wrap;
+  /* column-gap: 15%; */
+  flex-wrap: nowrap;
 }
 .scroller {
   overflow-y: scroll;
@@ -170,22 +169,33 @@ button {
   text-wrap-mode: nowrap;
 }
 #projectDescription {
-  font: 15px "open sans", sans-serif;
+  font: 1.5vh "open sans", sans-serif;
   margin-bottom: 10px;
 }
 #projectsInfoContainer {
-  width: 650px;
+  max-width: 100%;
   display: flex;
   flex-direction: column;
-  gap: 50px;
-  align-content: center;
+  gap: 40px;
+  padding: 15px 5px;
+  width: 850px;
   justify-content: center;
-  align-items: flex-start;
+}
+#projectsContainer {
+  padding: 0;
+  scrollbar-width: none;
+  width: -webkit-fill-available;
+  display: inline-flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  align-content: space-around;
+  justify-content: space-around;
+  align-items: center;
   border: #ffffff11 1px solid;
-  border-radius: 4px;
-  padding: 10px;
-  height: fit-content;
-  flex-wrap: nowrap;
+  margin: 5%;
+  border-radius: 10px;
+  overflow: scroll;
+  height: 70vh;
 }
 #repButton {
   width: fit-content;
@@ -221,15 +231,46 @@ button {
   box-shadow: #ffffff11 0px 0px 5px;
   background-color: #13131305;
 }
+#projectSelectorButton {
+  box-shadow: inset 0px 1px 2px -2px #ffffff;
+  background: linear-gradient(to bottom, #ededed 5%, #dfdfdf 100%);
+  background-color: #ededed;
+  border-radius: 8px;
+  border: 1px solid #dcdcdc;
+  display: inline-block;
+  cursor: pointer;
+  color: #777777;
+  font-family: Arial;
+  font-size: 22px;
+  font-weight: bold;
+  padding: 32px 8px;
+  text-decoration: none;
+  text-shadow: 0px 1px 0px #ffffff;
+  height: 70vh;
+  text-align: center;
+  justify-content: center;
+  display: flex;
+  align-items: center;
+  width: 50px;
+}
+#projectSelectorButton:hover {
+  background: linear-gradient(to bottom, #dfdfdf 5%, #ededed 100%);
+  background-color: #dfdfdf;
+}
+#projectSelectorButton:active {
+  position: relative;
+  top: 1px;
+}
 #terminal {
-  width: 450px;
-  height: 100%;
+  width: auto;
+  height: 500px;
   object-fit: contain;
-  animation: dropShadowAnimation 5s;
+  animation: dropShadowAnimation 20s;
   animation-iteration-count: infinite;
-  animation-timing-function: ease-in-out;
-  -webkit-filter: drop-shadow(0px 0px 1px #ffffff02);
-  filter: drop-shadow(0px 0px 0px #ffffff77);
+  -webkit-filter: drop-shadow(0px 0px 0px #ee1d1d02);
+  filter: drop-shadow(0px 0px 0px #c4080877);
+  max-width: 100%;
+  max-height: 100%;
 }
 @keyframes randomColor {
   0% {
@@ -288,12 +329,18 @@ button {
 }
 @keyframes dropShadowAnimation {
   0% {
-    filter: drop-shadow(0px 0px 1px #ffffff3f);
+    filter: drop-shadow(0px 0px 0.1px #ff0000);
+  }
+  25% {
+    filter: drop-shadow(0px 0px 0.5px #00b7ff);
   }
   50% {
-    filter: drop-shadow(0px 0px 4px #ffffff3f);
+    filter: drop-shadow(0px 0px 0.1px #00ff15);
+  }
+  75% {
+    filter: drop-shadow(0px 0px 0.5px #eeff00);
   }
   100% {
-    filter: drop-shadow(0px 0px 1px #ffffff3f);
+    filter: drop-shadow(0px 0px 0.1px #ff0000);
   }
 }
