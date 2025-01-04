@@ -197,6 +197,71 @@ button {
   overflow: scroll;
   height: 70vh;
 }
+#renderImage {
+  width: 500px;
+  height: auto;
+  max-width: 100%;
+  border-radius: 5.5px;
+  box-shadow: #ffffff80 0px 0px 8px;
+  animation: dropShadowAnimation 20s;
+  animation-iteration-count: infinite;
+  -webkit-user-drag: none;
+}
+#renderImage:hover {
+  box-shadow: #ffffff70 0px 0px 17px;
+}
+#renderImage:active {
+  display: block;
+  position: absolute;
+  z-index: 1;
+  display: flex;
+  width: 80%;
+  position: fixed;
+  z-index: 10;
+  top: 50vh;
+  height: 5px0px;
+  align-content: space-around;
+  transform: translate(0%, -50%);
+}
+@keyframes randomColor {
+  0% {
+    height: 1000px;
+  }
+  100% {
+    height: 500px;
+  }
+}
+#renderText {
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  font-family: "bangers", sans-serif;
+  font-size: 5vh;
+}
+#renderContainerSup {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  width: 100vw;
+  flex-wrap: wrap;
+  height: 60vh;
+  align-content: center;
+  row-gap: 20px;
+  column-gap: 10px;
+  padding: 20px 30px;
+}
+#renderContainer {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  width: 100vw;
+  flex-wrap: wrap;
+  height: 60vh;
+  align-content: flex-start;
+  row-gap: 20px;
+  column-gap: 10px;
+  padding: 20px 30px;
+}
 #repButton {
   width: fit-content;
   height: 25px;
