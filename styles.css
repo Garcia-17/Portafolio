@@ -156,6 +156,7 @@ button {
 .scroller section {
   scroll-snap-align: center;
   scroll-snap-stop: always;
+  border-bottom: #ffffff15 1px solid;
 }
 #sideBar {
   width: 180px;
